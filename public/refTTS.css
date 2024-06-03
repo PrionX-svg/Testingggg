@@ -1,0 +1,359 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .search-bar {
+    position: relative;
+  }
+  
+  .search-input {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+  
+  .search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    background: none;
+    padding: 8px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+  }
+  
+  .search-button .fa {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #aaa;
+  }
+  
+  .search-button:focus {
+    outline: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+    }
+  
+    .search-bar {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .search-input {
+      width: calc(100% - 30px); /* Adjust the width of the input field */
+     }
+  }  
+
+ /* INI UNTUK ASIDE BAR */
+aside {
+    background-color: #252525;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    height: 100vh;
+    box-sizing: border-box;
+    flex: 1;
+    flex-direction: row;
+} 
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    padding: 10px 0;
+    cursor: pointer;
+} 
+
+
+/* INI UNTUK MAIN CONTENT (UPLOAD PDF) */
+
+ 
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .flex-container{
+    display: flex;
+  }
+
+  .container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 80vh;
+    margin-top: 20px;
+  } 
+
+   
+  h1 {
+    font-size: 44px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .text-input {
+    /* margin: 20px 0; */
+    /* padding: 10px; */
+    width: 396px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+  } 
+  
+  .btn {
+    padding: 10px 10px;
+    margin: 5px 5px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 190.4px;
+    align-items: center;
+  }
+   
+   .btn:hover {
+    background-color: #d4d4d4;
+  }
+
+/* Reset CSS */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-text {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-button-icon {
+  width: 24px;
+  height: 24px;
+  background: url('search-icon.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.TTSflex-container {
+  display: flex;
+  height: calc(100% - 60px);
+}
+
+aside {
+  background-color: #e0e0e0;
+  width: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.Sidebar-navigation ul {
+  list-style: none;
+}
+
+.Sidebar-navigation ul li {
+  margin-bottom: 16px;
+}
+
+.Sidebar-navigation ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.Sidebar-navigation ul li a:hover {
+  color: #007bff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.Converter {
+  background-color: #ccc;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.convert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-TTS {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.convert input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-radius: 4px;
+}
+
+.button-upload {
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.Display-PDF {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-converter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.button-generate, .button-speech {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-generate:hover, .button-speech:hover {
+  background-color: #0056b3;
+}
+
+.card-display {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.text-display, .text-speech {
+  margin-bottom: 20px;
+}
+
+.text-explanation {
+  margin-bottom: 10px;
+}
+
+.title-text-speech {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.display-text-speech {
+  margin-bottom: 10px;
+} */
+
+
+  
